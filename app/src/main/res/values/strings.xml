@@ -1,0 +1,21 @@
+<resources>
+    <!-- Names -->
+    <string name="app_name">PokeApp</string>
+
+    <!-- Actions -->
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_login">Login</string>
+
+    <!-- Hints -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_password_with_instruction">Password (must be at least 8 characters)</string>
+
+    <!-- Descriptions -->
+    <string name="description_divider">Divider</string>
+    <string name="description_logo">Logo</string>
+    <string name="action_go_to_profile">Go to Profile</string>
+
+    <!-- Display -->
+    <string name="display_profile">Profile</string>
+</resources>

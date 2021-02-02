@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "973879061723",
+    "project_id": "pokeapp-b71c0",
+    "storage_bucket": "pokeapp-b71c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973879061723:android:54852b135416e92d6bf0fe",
+        "android_client_info": {
+          "package_name": "com.cody.pokeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973879061723-8aklg66pd12pl83rs48e5ipdam536vtl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbybchdngVyUtUm9w-1BtkTnD5KlZn4XY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973879061723-8aklg66pd12pl83rs48e5ipdam536vtl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

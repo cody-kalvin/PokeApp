@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/janusFragment">
+
+    <fragment
+        android:id="@+id/janusFragment"
+        android:name="com.cody.pokeapp.ui.janus.JanusFragment"
+        tools:layout="@layout/fragment_janus" />
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.cody.pokeapp.ui.signup.SignUpFragment"
+        tools:layout="@layout/fragment_sign_up" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.cody.pokeapp.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/deckFragment"
+        android:name="com.cody.pokeapp.ui.deck.DeckFragment"
+        tools:layout="@layout/fragment_deck">
+        <action
+            android:id="@+id/goToProfile"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.cody.pokeapp.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
