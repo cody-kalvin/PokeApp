@@ -1,24 +1,30 @@
 package com.cody.pokeapp.ui.signup
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.cody.pokeapp.R
 import com.cody.pokeapp.api.RequestState
 import com.cody.pokeapp.databinding.FragmentSignUpBinding
+import com.cody.pokeapp.di.common.Injectable
 import com.cody.pokeapp.util.autoCleared
-import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-@AndroidEntryPoint
-class SignUpFragment : Fragment() {
+class SignUpFragment : Fragment(), Injectable {
     private var binding: FragmentSignUpBinding by autoCleared()
 
-    private val viewModel: SignUpViewModel by viewModels()
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    private val viewModel: SignUpViewModel by viewModels {
+        viewModelFactory
+    }
 
     private val navController by lazy {
         (requireActivity().supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment).navController

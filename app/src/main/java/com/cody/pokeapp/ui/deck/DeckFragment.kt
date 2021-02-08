@@ -8,9 +8,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
 import com.cody.pokeapp.R
 import com.cody.pokeapp.databinding.FragmentDeckBinding
+import com.cody.pokeapp.di.common.Injectable
 import com.cody.pokeapp.util.autoCleared
 
-class DeckFragment : Fragment() {
+class DeckFragment : Fragment(), Injectable {
     private var binding: FragmentDeckBinding by autoCleared()
 
     private val navController by lazy {

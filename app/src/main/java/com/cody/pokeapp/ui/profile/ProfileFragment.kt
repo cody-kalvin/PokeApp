@@ -11,9 +11,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.cody.pokeapp.R
 import com.cody.pokeapp.databinding.FragmentProfileBinding
+import com.cody.pokeapp.di.common.Injectable
 import com.cody.pokeapp.util.autoCleared
 
-class ProfileFragment : Fragment() {
+class ProfileFragment : Fragment(), Injectable {
     private var binding: FragmentProfileBinding by autoCleared()
 
     private val navController by lazy {

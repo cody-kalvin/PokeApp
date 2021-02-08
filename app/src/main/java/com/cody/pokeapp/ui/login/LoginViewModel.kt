@@ -7,10 +7,8 @@ import com.cody.pokeapp.api.RequestState
 import com.cody.pokeapp.util.SharedPrefUtil
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-@HiltViewModel
 class LoginViewModel @Inject constructor(
     private val auth: FirebaseAuth,
     private val sharedPref: SharedPrefUtil

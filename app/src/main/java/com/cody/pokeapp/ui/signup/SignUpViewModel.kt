@@ -2,16 +2,13 @@ package com.cody.pokeapp.ui.signup
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.cody.pokeapp.api.RequestState
 import com.cody.pokeapp.util.SharedPrefUtil
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-@HiltViewModel
 class SignUpViewModel @Inject constructor(
     private val auth: FirebaseAuth,
     private val sharedPref: SharedPrefUtil

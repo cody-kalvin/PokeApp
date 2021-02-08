@@ -1,7 +1,20 @@
 package com.cody.pokeapp
 
-import androidx.multidex.MultiDexApplication
-import dagger.hilt.android.HiltAndroidApp
+import android.app.Application
+import com.cody.pokeapp.di.common.ApplicationInjector
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
+import javax.inject.Inject
 
-@HiltAndroidApp
-class MyApplication : MultiDexApplication()
+class MyApplication : Application(), HasAndroidInjector {
+    @Inject
+    lateinit var dispatchingAndroidInjector : DispatchingAndroidInjector<Any>
+
+    override fun androidInjector(): AndroidInjector<Any> = dispatchingAndroidInjector
+
+    override fun onCreate() {
+        super.onCreate()
+        ApplicationInjector.inject(this)
+    }
+}

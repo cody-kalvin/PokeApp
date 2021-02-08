@@ -1,12 +1,8 @@
 package com.cody.pokeapp.util
 
 import android.content.Context
-import dagger.hilt.android.qualifiers.ApplicationContext
-import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
-class SharedPrefUtil @Inject constructor(@ApplicationContext val context: Context) {
+class SharedPrefUtil(context: Context) {
     private val instance = context.getSharedPreferences(USER_CREDENTIALS, Context.MODE_PRIVATE)
 
     private val editor = instance.edit()
